@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CalculateEMI"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Amount Borrowed"
+        android:gravity="center"
+        android:textSize="25sp"/>
+    <SeekBar
+        android:id="@+id/amount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="200"
+        android:min="1"
+        />
+    <TextView
+        android:id="@+id/amountDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1000"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Interest in %"
+        android:gravity="center"
+        android:textSize="25sp"/>
+    <SeekBar
+        android:id="@+id/interest"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="1000"
+        android:min="1"/>
+    <TextView
+        android:id="@+id/interestDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0.01%"
+        android:gravity="center"/>
+
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Months to payback"
+        android:gravity="center"
+        android:textSize="25sp"/>
+    <SeekBar
+        android:id="@+id/duration"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:max="5"
+        android:min="1"/>
+    <TextView
+        android:id="@+id/durationDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="12"
+        android:gravity="center"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Monthly Payment"
+        android:gravity="center"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:gravity="center"/>
+
+</LinearLayout>
