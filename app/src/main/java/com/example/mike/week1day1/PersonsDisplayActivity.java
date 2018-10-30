@@ -6,6 +6,10 @@ import android.widget.Adapter;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import com.example.mike.week1day1.model.Person;
+
+import java.util.ArrayList;
+
 public class PersonsDisplayActivity extends AppCompatActivity {
 
     @Override
@@ -15,7 +19,14 @@ public class PersonsDisplayActivity extends AppCompatActivity {
 
         ListView lv = findViewById( R.id.listView );
 
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, findViewById(R.id.listItem), (Object[]) getIntent().getExtras().get("persons"));
+        ArrayList<Person> persons = (ArrayList<Person>) getIntent().getExtras().get("persons");
 
-    }
+        ArrayAdapter<Person> adapter = new ArrayAdapter<Person>(
+                this,
+                android.R.layout.simple_list_item_1,
+                persons );
+
+        lv.setAdapter(adapter);
+
+        }
 }

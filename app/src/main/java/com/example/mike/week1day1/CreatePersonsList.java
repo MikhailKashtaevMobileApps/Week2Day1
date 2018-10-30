@@ -3,6 +3,7 @@ package com.example.mike.week1day1;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -18,6 +19,7 @@ public class CreatePersonsList extends AppCompatActivity {
     private EditText et_age;
     private EditText et_gender;
     private ArrayList<Person> personList;
+    private String TAG = "CREATEPERSONLISTTAG";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +40,7 @@ public class CreatePersonsList extends AppCompatActivity {
         String gender = et_gender.getText().toString();
 
         if (name.equals("") || age.equals("") || gender.equals("")){
-            Toast.makeText(this, "Fill in All fields", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Fill in All fields", Toast.LENGTH_SHORT).show();
             return;
         }
 
@@ -46,12 +48,12 @@ public class CreatePersonsList extends AppCompatActivity {
 
         personList.add( p );
 
-        Toast.makeText( this, "Added "+p.toString(), Toast.LENGTH_SHORT );
+        Toast.makeText( this, "Added "+p.toString(), Toast.LENGTH_SHORT ).show();
     }
 
     public void displayPersonList(View view) {
         if ( personList.size() == 0 ){
-            Toast.makeText( this, "There is no Persons in List", Toast.LENGTH_SHORT );
+            Toast.makeText( this, "There is no Persons in List", Toast.LENGTH_SHORT ).show();
             return;
         }
         Intent intent = new Intent( getApplicationContext(), PersonsDisplayActivity.class );
